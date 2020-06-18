@@ -7,6 +7,10 @@ Back-End ini untuk melayani permintaan via HTTP sebagai API juga menghubungkanny
   - Node JS
   - TypeScript
 
+## Youtube
+
+[Video](https://youtu.be/U884mPpFYmA) - Membuat Back-End SMS Gateway dengan Node JS dan TypeScript
+
 
 License
 ----

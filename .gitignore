@@ -1,7 +1,7 @@
 node_modules
 *.js
-test
-cli
-lib
+$GIT_DIR/test
+$GIT_DIR/cli
+$GIT_DIR/lib
 package-lock.json
 idlog

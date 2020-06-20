@@ -9,7 +9,10 @@ export const connection = async (ws: WebSocket) => {
   console.log('new connection...')
   let currentHp = ''
   ws.on('message', (message: string) => incoming(message, ws, currentHp, (idhp: string) => currentHp = idhp))
-  ws.on('close', (code: number, reason: string) => { })
+  ws.on('close', (code: number, reason: string) => {
+    if (typeof mesinsms[currentHp] !== 'undefined' && currentHp !== '') delete (mesinsms[currentHp])
+    console.log(`Code: ${code}, Reason: ${reason}`)
+  })
   // jika tidak terregistrasi dalam tiga detik maka koneksi akan diputus
   await delay(3000)
   if (currentHp === '') ws.close(1012, 'ID HP belum terregistrasi')
